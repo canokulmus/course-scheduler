@@ -1,13 +1,151 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+* {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --night: #333436;
+    --night-hover: rgb(33, 32, 32);
+    --night-light: #2c2f33;
+    --main: #e91e63;
+    --main-dark: #920534;
+    --secondary: #00b8ae;
+    --secondary-dark: #008982;
+    --light: #fff;
+
+}
+
+::selection {
+    background-color: var(--main);
+    color: var(--light);
+}
+
+.bg-night {
+    background-color: var(--night);
+}
+
+
+
+body {
+    background-color: var(--night);
+    margin: none;
+    color: var(--light);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    /* height: 100vh; */
+    background-color: var(--night-light);
+    padding: 10px;
+    padding-bottom: 40px;
+}
+
+.btn-main {
+    background-color: var(--main);
+    color: var(--light);
+    border: none;
+    /* padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500; */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-main:hover {
+    background-color: var(--main-dark);
+    color: var(--light);
+}
+
+.btn-image {
+    background-color: #1c221d;
+    color: var(--light);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-image:hover {
+    background-color: #031029;
+    color: var(--light);
+}
+
+.btn-reset {
+    background-color: var(--secondary);
+    color: var(--light);
+    border: none;
+    /* padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500; */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-reset:hover {
+    background-color: var(--secondary-dark);
+    color: var(--light);
+}
+
+.btn-reset:focus,
+.btn-main:focus {
+    box-shadow: none;
+}
+
+
+.block {
+    text-align: center;
+    margin: 2px;
+    min-height: 50px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-block {
+    background-color: #232427;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.course-block:hover {
+    cursor: pointer;
+    background-color: var(--night-hover);
+    transition: all 0.3s ease-in-out;
+}
+
+.course-block:hover .remove-course-button {
+    display: block;
+}
+
+.remove-course-button {
+    color: var(--main);
+    display: none;
+    position: absolute;
+    right: 10px;
+    box-shadow: none !important;
+}
+
+.remove-course-button:hover {
+    color: red;
+    font-size: larger;
+    transition: all 0.3s ease-in-out;
+}
+
+.customInput {
+    border: none;
+    background-color: var(--night) !important;
+    padding: 10px;
+    height: 50px;
+    color: var(--light);
+}
+
+.customInput:focus {
+    outline: none !important;
+}
+
+.course-block-selected {
+    background-color: #920534;
 }
